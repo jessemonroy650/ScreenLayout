@@ -1,0 +1,87 @@
+* {margin:0;padding:0;}
+body {font-family: Helvetica, Arial, sans-serif;font-size:large;}
+/* font-size: xx-small x-small small medium large x-large xx-large */
+img {border:0;margin:0px;padding:0px;}
+a {font-weight:bold;text-decoration:none;color:black;}
+p {clear:both;}
+p.tbspacer {margin:0.5em 0;clear:both;}/* margin-top=margin-bottom=0.5em,else margin=0 */
+p.rlspacer {margin:0 0.5em;clear:both;}/* margin-top=margin-bottom=0.5em,else margin=0 */
+p.spacer {margin:0.5em;clear:both;}
+#header {
+	margin:0;
+	display:block; /* none, inline, block, list-item */
+	visibility:visible; /* visible, hidden, collapes */
+	/* below borrowed idea */
+	border: 1px solid;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	/* fixed-poistion header-required start */
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	/* fixed-poistion header-required end */
+	/* configure per client */
+	/* 'background' is required, else it is transparent */
+	background:lightblue;
+	height:2em;
+	padding:0.5em;
+	font-size: x-large;
+}
+/* 
+NOTE: This next 'id', '#headerClear' - which sits in a <div>, fixes the text layout
+for the header (#header).
+This is a trick to keep the text below the header, but there should be another way.
+Notice how it copies (and not inherts) the style of the other 'div's.
+Notice also how the 'position' is not 'fixed', so it inherts and flows with the text.
+*/
+#headerClear {
+	margin:0;
+	display:block;
+	visibility:hidden; /* hidden, not collape */
+	/* below borrowed idea */
+	border: 1px solid;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	/* configure per client */
+	height:2em;
+	padding:0.5em;
+	font-size: x-large;
+}
+/* 
+#message has it's own file, with a corresponding messages.js 
+*/
+#content {}
+#footer {
+	margin:0;
+	display:block;
+	visibility:visible;
+	/* below borrowed idea */
+	border: 1px solid;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	/* footer-required start */
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+	/* footer-required end */
+	/* configure per client */
+	background:lightblue;
+	height:2em;
+	padding:0.5em;
+	font-size: small;
+}
+#footerClear {
+	margin:0;
+	display:block;
+	visibility:hidden; /* hidden, not collape */
+	/* below borrowed idea */
+	border: 1px solid;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	/* configure per client */
+	height:2em;
+	padding:0.5em;
+	font-size: small;
+}
+
+/* special for this example */
+#visibleTopLabel { font-weight:bold;margin:0;padding:0;color:green; }
+#visibleBottomLabel { font-weight:bold;margin:0;padding:0;color:red; }
